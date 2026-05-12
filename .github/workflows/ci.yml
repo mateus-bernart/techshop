@@ -20,7 +20,7 @@ jobs:
         pip install uv
         uv --version
     - name: Install dependencies
-      run: uv sync
+      run: uv pip sync --with dev
     - name: Run tests with coverage
       run: uv run pytest --cov=src --cov-fail-under=80
       env:
